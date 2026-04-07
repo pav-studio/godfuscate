@@ -1,0 +1,25 @@
+{
+  "min_length": 12,
+  "max_length": 24,
+  "prefix": "__",
+  "suffix": "",
+  "use_numbers": true,
+  "use_uppercase": true,
+  "use_lowercase": true,
+  "randomize_each_build": true,
+  "rename_files": true,
+  "confusing_names": true,
+  "rename_functions": true,
+  "rename_variables": true,
+  "rename_classes": true,
+  "shuffle_methods": true,
+  "shuffle_files": false,
+  "avoid_keywords": [
+    "_ready",
+    "_process",
+    "_physics_process",
+    "_input",
+    "_enter_tree",
+    "_exit_tree"
+  ]
+}
