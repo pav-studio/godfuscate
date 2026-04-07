@@ -256,26 +256,8 @@ class BuilderUI:
         shutil.copytree(project, tmp_dir, ignore=shutil.ignore_patterns("build"))
 
         # rename files
-        self.log("Renaming files...")
-
-        rename_map = {}
-
-        for root, dirs, files in os.walk(tmp_dir):
-            for file in files:
-
-                ext = os.path.splitext(file)[1]
-
-                if ext in [".gd",".tscn",".glb",".gltf",".png",".jpg",".wav"]:
-                    new = generate_name() + ext
-
-                    old_path = os.path.join(root,file)
-                    new_path = os.path.join(root,new)
-
-                    os.rename(old_path,new_path)
-
-                    rename_map[file] = new
-
-        # export
+        self.log("Preparing secure build...")
+               # export
         for p in selected:
 
             self.log(f"Building {p}")
